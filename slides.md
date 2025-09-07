@@ -48,6 +48,21 @@ hideInToc: true
   line-height: 1.2 !important; /* 가독성을 위한 줄 간격 */
 }
 
+.custom-table-xxs table th,
+.custom-table-xxs table td {
+  font-size: 0.55rem !important; /* text-xs */
+  padding: 2px !important; /* 작은 테이블에 맞는 패딩 */
+}
+
+.custom-table-xxs table th {
+  text-align: center !important;
+  font-weight: bold !important;
+}
+
+.custom-table-xxs table td {
+  line-height: 1.0 !important; /* 가독성을 위한 줄 간격 */
+}
+
 .img-fit {
   max-width: 100%;
   max-height: 70vh;
@@ -135,6 +150,24 @@ code {
 .code-comfortable .slidev-code {
   font-size: 14px !important;
   line-height: 1.6 !important;
+}
+
+.code-scroll {
+  max-height: 400px;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.code-scroll-sm {
+  max-height: 300px;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.code-scroll-lg {
+  max-height: 500px;
+  overflow-y: auto;
+  overflow-x: auto;
 }
 </style>
 
@@ -262,7 +295,6 @@ class: "section-center"
 src: ./slides/07-application_api.md
 ---
 
-
 ---
 layout: section  
 class: "section-center"
@@ -271,11 +303,19 @@ class: "section-center"
 # 플러그인 개발
 
 ---
+src: ./slides/08-plugin.md
+---
+
+---
 layout: section  
 class: "section-center"
 ---
 
 # 플러그인 개발 API
+
+---
+src: ./slides/09-plugin_api.md
+---
 
 ---
 layout: section  
