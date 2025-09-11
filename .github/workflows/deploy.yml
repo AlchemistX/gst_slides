@@ -34,46 +34,8 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Export PDF
-        run: |
-          npx slidev export --output GStreamer_in_Action.pdf --with-clicks --timeout 60000
-          # PDF를 dist 폴더에도 복사 (웹사이트에서 다운로드 가능하게)
-          cp gstreamer-slides.pdf ./dist/
-
-      - name: Upload PDF as artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: GStreamer_in_Action-pdf
-          path: GStreamer_in_Action.pdf
-          retention-days: 90
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           force_orphan: true
-
-      - name: Create Release with PDF
-        if: github.event_name == 'push'
-        uses: softprops/action-gh-release@v1
-        with:
-          tag_name: slides-${{ github.run_number }}
-          name: GStreamer Slides Release ${{ github.run_number }}
-          body: |
-            🎯 GStreamer 강의 슬라이드 자동 생성
-            
-            📊 **포함된 내용:**
-            - 웹 슬라이드: [GitHub Pages에서 보기](${{ steps.deployment.outputs.page_url }})
-            - PDF 다운로드: GStreamer_in_Action.pdf
-            
-            🔄 **빌드 정보:**
-            - Commit: ${{ github.sha }}
-            - Build: ${{ github.run_number }}
-            - Date: ${{ github.event.head_commit.timestamp }}
-          files: |
-            GStreamer_in_Action.pdf
-          draft: false
-          prerelease: false
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
