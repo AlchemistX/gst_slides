@@ -26,6 +26,18 @@ jobs:
         with:
           node-version: 'lts/*'
 
+      - name: Install Korean fonts
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            fonts-nanum \
+            fonts-nanum-coding \
+            fonts-nanum-extra \
+            fonts-unfonts-core \
+            fonts-baekmuk \
+            fonts-noto-cjk
+          sudo fc-cache -fv
+
       - name: Install dependencies
         run: npm install
       - run: npm install -D playwright-chromium
@@ -36,7 +48,13 @@ jobs:
 
       - name: Export PDF
         run: |
-          npx slidev export --output GStreamer_in_Action.pdf --with-clicks --timeout 60000
+          export DISPLAY=:99
+          npx slidev export \
+            --output GStreamer_in_Action.pdf \
+            --with-clicks \
+            --timeout 60000 \
+            --format pdf \
+            --dark false
           cp GStreamer_in_Action.pdf ./dist/
 
       - uses: peaceiris/actions-gh-pages@v3
