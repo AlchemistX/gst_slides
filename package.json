@@ -5,7 +5,7 @@
   "scripts": {
     "build": "slidev build --base=/gst_slides/",
     "dev": "slidev --open",
-    "export": "slidev export"
+    "export": "slidev export",
     "export-pdf": "slidev export --output GStreamer_in_Action.pdf --with-clicks --timeout 60000",
     "export-png": "slidev export --format png --output slides-images",
     "preview": "vite preview"
