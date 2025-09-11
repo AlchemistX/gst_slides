@@ -780,10 +780,14 @@ hideInToc: true
 
 
 :: right ::
-<iframe 
-  src="https://www.ligo.caltech.edu" 
-  style="width: 100%; height: 30vh; border: none;"
-> </iframe>
+<figure class="text-center">
+  <div class="w-full mx-auto">
+    <img 
+      src="./assets/01-introduction-04.png"
+      class="w-auto h-110 max-h-[75vh] object-contain mx-auto block shadow-md rounded-lg" 
+    />
+  </div>
+</figure>
 
 ---
 layout: top-title-two-cols
@@ -807,7 +811,11 @@ hideInToc: true
 
 
 :: right ::
-<iframe 
-  src="https://nnstreamer.ai/"
-  style="width: 100%; height: 30vh; border: none;"
-></iframe>
+<figure class="text-center">
+  <div class="w-full mx-auto">
+    <img 
+      src="./assets/01-introduction-05.png"
+      class="w-auto h-110 max-h-[75vh] object-contain mx-auto block shadow-md rounded-lg" 
+    />
+  </div>
+</figure>

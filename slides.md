@@ -169,6 +169,12 @@ code {
   overflow-y: auto;
   overflow-x: auto;
 }
+
+.mermaid-xxs .mermaid { transform: scale(0.4); transform-origin: top left; }
+.mermaid-xs .mermaid { transform: scale(0.6); transform-origin: top left; }
+.mermaid-sm .mermaid { transform: scale(0.8); transform-origin: top left; }
+.mermaid-lg .mermaid { transform: scale(1.2); transform-origin: top left; }
+.mermaid-xl .mermaid { transform: scale(1.4); transform-origin: top left; }
 </style>
 
 
@@ -323,6 +329,10 @@ class: "section-center"
 ---
 
 # 플러그인 내부 구조
+
+---
+src: ./slides/10-plugin_internals.md
+---
 
 ---
 layout: section  
