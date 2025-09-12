@@ -22,8 +22,9 @@ mkdir GStreamer
 cd GStreamer
 pyenv local 3.10.18
 python -m venv venv
+source venv/bin/activate
 pip install meson ninja gitlint pre-commit jinja2 markdown markupsafe \
-    packaging pygments typogrify tomli
+    packaging pygments typogrify tomli numpy numpy_ringbuffer matplotlib
 ```
 </div>
 

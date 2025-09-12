@@ -33,3 +33,15 @@ hideInToc: true
 ---
 src: ./10-03-pad_and_capabilities.md
 ---
+
+---
+layout: section  
+class: "section-center"
+hideInToc: true
+---
+
+# 동기화
+
+---
+src: ./10-04-synchronization.md
+---
