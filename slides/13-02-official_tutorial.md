@@ -7,7 +7,9 @@ hideInToc: true
 
 :: content ::
 <div class="highlight-box text-xs">
-<strong>참고 자료:</strong> https://gstreamer.freedesktop.org/documentation/tutorials/basic/index.html?gi-language=c
+<strong>참고 자료:</strong>
+
+- https://gstreamer.freedesktop.org/documentation/tutorials/basic/index.html?gi-language=c
 </div>
 
 <div class="custom-table-xs mt-6">

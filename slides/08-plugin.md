@@ -149,22 +149,21 @@ gst_plugin_tutorial_register (void)
 }
 ```
 ```bash
-08.gst_plugins/00.boiler_plate/build on  master [?] via C v17.0.0-clang
-❯ nm -g -C libgsttutorial.dylib | grep "T"
-0000000000001a78 T _gst_plugin_tutorial_get_desc
-0000000000001a84 T _gst_plugin_tutorial_register
-0000000000001b34 T _gst_tutorial_filter_get_type
+08.gst_plugins/00.boiler_plate/build on  master via C v13.3.0-gcc via 🐍 v3.10.18 (venv) via ⬢ gstreamer-full
+⬢ [Docker] ❯ nm -g -C libgsttutorial.so | grep "T"
+00000000000012ae T gst_plugin_tutorial_get_desc
+00000000000012bf T gst_plugin_tutorial_register
+000000000000136f T gst_tutorial_filter_get_type
 
-08.gst_plugins/00.boiler_plate/build on  master [?] via C v17.0.0-clang
-❯ nm -g -C /opt/homebrew/lib/gstreamer-1.0/libgstcoreelements.dylib | grep "T"
-                 U _GST_CAT_DEFAULT
-0000000000009f68 T _gst_plugin_coreelements_get_desc
-0000000000009f74 T _gst_plugin_coreelements_register
+08.gst_plugins/00.boiler_plate/build on  master via C v13.3.0-gcc via 🐍 v3.10.18 (venv) via ⬢ gstreamer-full
+⬢ [Docker] ❯ nm -g -C ~/GStreamer/gstreamer/build/subprojects/gstreamer/plugins/elements/libgstcoreelements.so | grep "T"
+000000000001b240 T gst_plugin_coreelements_get_desc
+000000000001b250 T gst_plugin_coreelements_register
 
-08.gst_plugins/00.boiler_plate/build on  master [?] via C v17.0.0-clang
-❯ nm -g -C /opt/homebrew/lib/gstreamer-1.0/libgstadder.dylib | grep "T"
-0000000000003f40 T _gst_plugin_adder_get_desc
-0000000000003f4c T _gst_plugin_adder_register
+08.gst_plugins/00.boiler_plate/build on  master via C v13.3.0-gcc via 🐍 v3.10.18 (venv) via ⬢ gstreamer-full
+⬢ [Docker] ❯ nm -g -C ~/GStreamer/gstreamer/build/subprojects/gst-plugins-base/gst/adder/libgstadder.so | grep "T"
+000000000000b4a0 T gst_plugin_adder_get_desc
+000000000000b4b0 T gst_plugin_adder_register
 ```
 ````
 </div>
